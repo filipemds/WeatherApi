@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using WeatherApi.Application.Services;
 using WeatherApi.Domain.Interfaces;
 using WeatherApi.Infrastructure.Repositories;

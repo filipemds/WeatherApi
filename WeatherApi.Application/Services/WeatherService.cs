@@ -28,7 +28,6 @@ namespace WeatherApi.Application.Services
                 var responseString = await response.Content.ReadAsStringAsync();
                 var cityWeather = JsonConvert.DeserializeObject<CityWeatherData>(responseString);
 
-                // Process and save the data
                 foreach (var condition in cityWeather.Clima)
                 {
                     var cityWeatherData = new CityWeatherData
