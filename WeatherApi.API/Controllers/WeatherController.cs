@@ -16,6 +16,12 @@ namespace WeatherApi.API.Controllers
             _weatherService = weatherService;
         }
 
+
+        /// <summary>
+        /// Obtém o clima de uma cidade.
+        /// </summary>
+        /// <param name="city">Nome da cidade.</param>
+        /// <returns>Dados climáticos da cidade.</returns>
         [HttpGet("city/{city}")]
         public async Task<IActionResult> GetWeatherByCity(string city)
         {
@@ -30,6 +36,11 @@ namespace WeatherApi.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Obtém o clima de um aeroporto.
+        /// </summary>
+        /// <param name="icaoCode">Código ICAO do aeroporto.</param>
+        /// <returns>Dados climáticos do aeroporto.</returns>
         [HttpGet("airport/{icaoCode}")]
         public async Task<IActionResult> GetWeatherByAirport(string icaoCode)
         {
